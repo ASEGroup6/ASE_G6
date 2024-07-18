@@ -1,0 +1,128 @@
+/* ブラウザがそれぞれ持っているCSSをリセットするための記述 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #6c6b6b;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.header{
+    width: 100%; /* 横幅いっぱい */
+    height: 100px; /* 高さ120px */
+    padding: 30px 0 5px;
+    margin: 0 auto;
+    /*background-color: red; /* 背景色: 赤 */
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 54px;
+}
+
+.nav-list {
+    text-align: center;
+    padding: 10px 0;
+    margin: 0 auto;
+}
+
+.nav-list-item {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.main{
+    width: 75%; /* 横幅いっぱい */
+    height: 580px; /* 高さ300px */
+    /*background-color: orange; /* 背景色: オレンジ */
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.main-image {
+    width: 100%;
+    height: 500px;
+    margin: 30px 0 50px;
+    background-image: url(img/stamp_summer.png);
+    background-repeat: no-repeat;
+    background-size: contain; /* 縦横比を保持して埋める */
+    background-position: center;
+}
+
+.button {
+    width: 100%;
+}
+
+a.btn_05 {
+	display: block;
+	text-align: center;
+	vertical-align: middle;
+	text-decoration: none;
+	width: 400px;
+	margin: auto;
+	padding: 1rem 4rem;
+	font-weight: bold;
+    font-size: 30px;
+	border-radius: 0.3rem;
+	border-bottom: 7px solid #0686b2;
+	background: #27acd9;
+	color: #fff;
+}
+a.btn_05:hover {
+	margin-top: 6px;
+	border-bottom: 1px solid #0686b2;
+	color: #fff;
+}
+
+
+/* table */
+.tab {
+    margin: 30px 30px;
+}
+
+.ta_log{
+    width: 100%;
+    height: 30px;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+  
+.ta_log th,.ta_log td{
+    padding: 10px 0;
+    text-align: center;
+}
+  
+.ta_log tr:nth-child(odd){
+    background-color: #eee
+}
+
+/* user-image */
+.user-image {
+    width: 60%;
+    height: 300px;
+    margin: 30px auto 50px;
+    background-image: url(img/profile_image.png);
+    background-repeat: no-repeat;
+    background-size: contain; /* 縦横比を保持して埋める */
+    background-position: center;
+}
+
+.user-info {
+    text-align: center;
+    font-weight: bold;
+    font-size: 22px;
+    margin: 30px auto;
+}
+
+.change {
+    text-align: center;
+    font-weight: bold;
+    margin: 30px auto;
+}
