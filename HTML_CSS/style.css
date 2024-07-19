@@ -37,6 +37,7 @@ a {
     margin: 0 20px;
 }
 
+/* スタンプカードの台紙とスタンプをくっつける + 範囲指定 */
 .main{
     width: 75%; /* 横幅いっぱい */
     height: 580px; /* 高さ300px */
@@ -44,22 +45,42 @@ a {
     display: flex;
     justify-content: center;
     margin: 0 auto;
+    position: relative;
 }
 
+/* 台紙 */
 .main-image {
     width: 100%;
-    height: 500px;
-    margin: 30px 0 50px;
+    height: 500px; 
+    margin: 30px 0 50px; /* 余白の指定 上 左右 下 */
     background-image: url(img/stamp_summer.png);
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; /* 繰り返さない */
     background-size: contain; /* 縦横比を保持して埋める */
-    background-position: center;
+    background-position: center; /* 中央に */
 }
 
+/* スタンプ */
+.iine {
+    position: absolute; /* これで画像の上に重ねてる */
+    background-image: url(img/iine.png);
+    background-repeat: no-repeat; /* 繰り返さない */
+    background-size: contain; /* 縦横比を保持して埋める */
+    background-position: center; /* 中央に */
+    /* 座標指定 */
+    right: 500px;
+    bottom: 240px;
+    /* サイズ指定 */
+    width: 180px;
+    height: 150px;
+}
+
+/* 食券のボタン Webサイトから引用 */
+/* 範囲 */
 .button {
     width: 100%;
 }
 
+/* 基本の見た目 */
 a.btn_05 {
 	display: block;
 	text-align: center;
@@ -75,6 +96,8 @@ a.btn_05 {
 	background: #27acd9;
 	color: #fff;
 }
+
+/* カーソルが上にのった時の見た目 */
 a.btn_05:hover {
 	margin-top: 6px;
 	border-bottom: 1px solid #0686b2;
@@ -82,28 +105,30 @@ a.btn_05:hover {
 }
 
 
-/* table */
+/* logの表 */
+/* 上下左右の余白 */
 .tab {
     margin: 30px 30px;
 }
-
+/* 表の幅とかの指定 */
 .ta_log{
     width: 100%;
     height: 30px;
     border-collapse: collapse;
     border-spacing: 0;
 }
-  
+/* 表の中身 */
 .ta_log th,.ta_log td{
     padding: 10px 0;
     text-align: center;
 }
-  
+/* 偶数行の色を変更 */
 .ta_log tr:nth-child(odd){
     background-color: #eee
 }
 
-/* user-image */
+/* userページ */
+/* アイコンの画像の指定 */
 .user-image {
     width: 60%;
     height: 300px;
@@ -113,14 +138,14 @@ a.btn_05:hover {
     background-size: contain; /* 縦横比を保持して埋める */
     background-position: center;
 }
-
+/*  名前と継続の文字 */
 .user-info {
     text-align: center;
     font-weight: bold;
     font-size: 22px;
     margin: 30px auto;
 }
-
+/* ユーザの情報の変更用に作ったけどHTMLに書いてないので使ってません */
 .change {
     text-align: center;
     font-weight: bold;
